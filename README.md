@@ -1,25 +1,25 @@
 # data-pipeline
-AWS Data Pipeline & Analytics Project 🚀
+# AWS Data Pipeline & Analytics Project 🚀
 
 Welcome to the AWS Data Pipeline and Analytics Project!
 This project demonstrates how to build a complete serverless data pipeline on AWS using Amazon S3, AWS Glue, AWS Athena, and QuickSight.
 It is designed as a beginner-friendly, portfolio-ready project that follows modern data engineering architecture.
-
-🏗️ Data Architecture
+---
+# 🏗️ Data Architecture
 
 This project follows a lightweight version of the Medallion Architecture (Bronze → Silver → Gold) inside the AWS ecosystem.
 
 Architecture Layers
 
-Raw Zone (Bronze): Raw CSV data is uploaded to Amazon S3.
+Raw Zone : Raw CSV data is uploaded to Amazon S3.
 
-Clean Zone (Silver): AWS Glue cleans, transforms, and standardizes the data.
+Clean Zone : AWS Glue cleans, transforms, and standardizes the data.
 
-Analytics Zone (Gold): Athena creates external tables from the processed data for business insights.
+Analytics Zone : Athena creates external tables from the processed data for business insights.
 
 BI Layer: Amazon QuickSight is used to create dashboards and reports.
 
-📖 Project Overview
+**📖 Project Overview**
 1️⃣ AWS Cloud Architecture Components
 
 Amazon S3 (Data Lake)
@@ -36,11 +36,11 @@ Amazon QuickSight (Dashboard & BI Layer)
 
 Extract data from local CSV
 
-Upload into S3 (Bronze Zone)
+Upload into S3 
 
-Clean & transform using AWS Glue (Silver Zone)
+Clean & transform using AWS Glue 
 
-Create Athena tables for analytics (Gold Zone)
+Create Athena tables for analytics 
 
 3️⃣ Data Modeling
 
