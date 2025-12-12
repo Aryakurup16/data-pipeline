@@ -1,6 +1,6 @@
 # data-pipeline
 # AWS Data Pipeline & Analytics Project 🚀
-
+---
 Welcome to the AWS Data Pipeline and Analytics Project!
 This project demonstrates how to build a complete serverless data pipeline on AWS using Amazon S3, AWS Glue, AWS Athena, and QuickSight.
 It is designed as a beginner-friendly, portfolio-ready project that follows modern data engineering architecture.
