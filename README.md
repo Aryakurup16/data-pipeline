@@ -9,56 +9,54 @@ It is designed as a beginner-friendly, portfolio-ready project that follows mode
 
 This project follows a lightweight version of the Medallion Architecture (Bronze → Silver → Gold) inside the AWS ecosystem.
 
-Architecture Diagram (Draw.io provided below)
+Architecture Layers
 
-Raw Zone :
-Raw CSV data is uploaded to Amazon S3.
+Raw Zone (Bronze): Raw CSV data is uploaded to Amazon S3.
 
-Clean Zone :
-AWS Glue cleans, transforms, and standardizes the data.
+Clean Zone (Silver): AWS Glue cleans, transforms, and standardizes the data.
 
-Analytics Zone :
-Athena creates external tables from the processed data for business insights.
+Analytics Zone (Gold): Athena creates external tables from the processed data for business insights.
 
-BI Layer:
-Amazon QuickSight is used to create dashboards and reports.
+BI Layer: Amazon QuickSight is used to create dashboards and reports.
 
 📖 Project Overview
+1️⃣ AWS Cloud Architecture Components
 
-This project demonstrates:
+Amazon S3 (Data Lake)
 
-1️⃣ AWS Cloud Architecture
+AWS Glue Crawler
 
-S3 (data lake)
+AWS Glue ETL Job (PySpark)
 
-Glue Crawler
+Amazon Athena (Serverless SQL Engine)
 
-Glue ETL Job (PySpark)
-
-Athena (SQL analytics)
-
-QuickSight (dashboards)
+Amazon QuickSight (Dashboard & BI Layer)
 
 2️⃣ ETL Pipeline
 
 Extract data from local CSV
 
-Upload into S3 
+Upload into S3 (Bronze Zone)
 
-Clean & transform using AWS Glue 
+Clean & transform using AWS Glue (Silver Zone)
 
-Athena tables for analytics
+Create Athena tables for analytics (Gold Zone)
 
 3️⃣ Data Modeling
 
 Flattened fact table design
 
-Partitioning strategy used:
-year, month, product_category (optional)
+Optional partitioning:
+
+year
+
+month
+
+product_category
 
 4️⃣ Analytics
 
-Athena SQL queries to find:
+Athena SQL queries help analyze:
 
 Top-selling products
 
@@ -70,28 +68,33 @@ Region-wise performance
 
 🎯 Skills Showcased
 
-This project highlights your skills in:
+This project highlights your abilities in:
 
 ✔️ AWS Data Engineering
+
 ✔️ ETL Development
+
 ✔️ Data Modeling
+
 ✔️ SQL Analytics
+
 ✔️ Cloud Architecture
+
 ✔️ Portfolio-building best practices
+
 🛠️ Tools Used
 
 All tools used in this project are free-tier compatible!
 
 Tool	Purpose
-AWS S3	Data storage (Bronze/Silver/Gold)
-AWS Glue Crawler	Auto-discover schema
-AWS Glue Job	ETL transformation
-AWS Athena	SQL query engine
-AWS IAM	Permissions
+AWS S3	Data storage for Bronze/Silver/Gold zones
+AWS Glue Crawler	Auto discovery of schema
+AWS Glue Job	ETL transformation using PySpark
+AWS Athena	SQL querying & analytics
+AWS IAM	Access & permissions
 AWS CLI / Python boto3	S3 automation
 Draw.io	Pipeline diagram
 GitHub	Version control
-
 📂 Repository Structure
 /data-pipeline-project
     /bronze
@@ -107,7 +110,8 @@ GitHub	Version control
 
 🛡️ License
 
-Open-source under MIT License. You may use or modify this project freely.
+This project is licensed under the MIT License.
+You are free to use, modify, and share this project.
 
 👨‍💻 About Me
 
